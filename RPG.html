@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha Minimalista - Ordem Paranormal</title>
+    <link rel="stylesheet" href="RPG.css">
+</head>
+<body>
+
+    <div class="sheet">
+        <h1>ORDEM PARANORMAL • FICHA DE AGENTE</h1>
+
+        <!-- Dados Básicos -->
+        <div class="grid grid-2">
+            <div class="field"><label>AGENTE</label><input type="text" placeholder="Nome"></div>
+            <div class="field"><label>JOGADOR</label><input type="text" placeholder="Nome do Jogador"></div>
+        </div>
+
+        <div class="grid grid-3" style="margin-top: 8px;">
+            <div class="field"><label>ORIGEM</label><input type="text"></div>
+            <div class="field"><label>CLASSE</label><input type="text"></div>
+            <div class="field"><label>NEX %</label><input type="text" class="center" placeholder="5%"></div>
+        </div>
+
+        <!-- Atributos -->
+        <h2>Atributos</h2>
+        <div class="grid grid-5">
+            <div class="field"><label class="center">AGI</label><input type="number" class="center" value="1"></div>
+            <div class="field"><label class="center">FOR</label><input type="number" class="center" value="1"></div>
+            <div class="field"><label class="center">INT</label><input type="number" class="center" value="1"></div>
+            <div class="field"><label class="center">PRE</label><input type="number" class="center" value="1"></div>
+            <div class="field"><label class="center">VIG</label><input type="number" class="center" value="1"></div>
+        </div>
+
+        <!-- Status do Agente -->
+        <h2>Status</h2>
+        <div class="grid grid-3">
+            <div class="field"><label>PV (ATUAL / MÁX)</label><input type="text" class="center" placeholder="20 / 20"></div>
+            <div class="field"><label>PE (ATUAL / MÁX)</label><input type="text" class="center" placeholder="2 / 2"></div>
+            <div class="field"><label>SAN (ATUAL / MÁX)</label><input type="text" class="center" placeholder="12 / 12"></div>
+        </div>
+
+        <div class="grid grid-2" style="margin-top: 8px;">
+            <div class="field"><label>DEFESA</label><input type="text" class="center" placeholder="10"></div>
+            <div class="field"><label>DESLOCAMENTO</label><input type="text" class="center" placeholder="9m"></div>
+        </div>
+
+        <!-- Ataques Principal -->
+        <h2>Ataques</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ARMA / ATAQUE</th>
+                    <th style="width: 20%;">TESTE</th>
+                    <th style="width: 25%;">DANO / CRÍTICO</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" placeholder="Ex: Revólver"></td>
+                    <td><input type="text" class="center" placeholder="1d20+2"></td>
+                    <td><input type="text" class="center" placeholder="2d6 / 19x3"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" placeholder="Ex: Faca"></td>
+                    <td><input type="text" class="center" placeholder="1d20"></td>
+                    <td><input type="text" class="center" placeholder="1d4+FOR / 19x2"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Perícias Principais -->
+        <h2>Perícias Principais</h2>
+        <table>
+          <th>Perícia</th>
+                        <th style="width: 12%;">Atr</th>
+                        <th style="width: 15%;">Treino</th>
+                        <th style="width: 20%;">Outros</th>
+                        <th style="width: 20%;">Bônus</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Acrobacia</td><td class="center">AGI</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                    <tr><td>Adestramento</td><td class="center">PRE</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                    <tr><td>Artes</td><td class="center">PRE</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                    <tr><td>Atletismo</td><td class="center">FOR</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                    <tr><td>Atualidades</td><td class="center">INT</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                    <tr><td>Ciências</td><td class="center">INT</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                    <tr><td>Crime</td><td class="center">AGI</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                    <tr><td>Diplomacia</td><td class="center">PRE</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                    <tr><td>Enganação</td><td class="center">PRE</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                    <tr><td>Fortitude</td><td class="center">VIG</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                    <tr><td>Furtividade</td><td class="center">AGI</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                    <tr><td>Iniciativa</td><td class="center">AGI</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                    <tr><td>Intimidação</td><td class="center">PRE</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                    <tr><td>Intuição</td><td class="center">PRE</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>                                                        
+                    <tr><td>Investigação</td><td class="center">INT</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                    <tr><td>Luta</td><td class="center">FOR</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                    <tr><td>Medicina</td><td class="center">INT</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                    <tr><td>Ocultismo</td><td class="center">INT</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                    <tr><td>Percepção</td><td class="center">PRE</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                    <tr><td>Pilotagem</td><td class="center">AGI</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                    <tr><td>Pontaria</td><td class="center">AGI</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                    <tr><td>Profissão</td><td class="center">INT</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                    <tr><td>Reflexos</td><td class="center">AGI</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                    <tr><td>Religião</td><td class="center">PRE</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                    <tr><td>Sobrevivência</td><td class="center">INT</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                    <tr><td>Tática</td><td class="center">INT</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                    <tr><td>Tecnologia</td><td class="center">INT</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                    <tr><td>Vontade</td><td class="center">PRE</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

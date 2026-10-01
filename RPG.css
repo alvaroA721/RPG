@@ -1,0 +1,88 @@
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background-color: #121214;
+            color: #e1e1e6;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .sheet {
+            width: 100%;
+            max-width: 700px;
+            background: #18181b;
+            border: 1px solid #3f3f46;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 1.4rem;
+            letter-spacing: 2px;
+            color: #ef4444;
+            border-bottom: 1px solid #3f3f46;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            font-size: 0.85rem;
+            color: #a1a1aa;
+            text-transform: uppercase;
+            border-bottom: 1px solid #27272a;
+            margin: 15px 0 10px 0;
+            padding-bottom: 3px;
+        }
+
+        .grid { display: grid; gap: 10px; }
+        .grid-2 { grid-template-columns: 1fr 1fr; }
+        .grid-3 { grid-template-columns: repeat(3, 1fr); }
+        .grid-5 { grid-template-columns: repeat(5, 1fr); }
+
+        .field {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        label {
+            font-size: 0.65rem;
+            color: #a1a1aa;
+            font-weight: bold;
+        }
+
+        input {
+            background: #09090b;
+            border: 1px solid #3f3f46;
+            color: #fff;
+            padding: 5px;
+            font-family: inherit;
+            font-size: 0.85rem;
+            border-radius: 4px;
+            outline: none;
+            width: 100%;
+        }
+
+        input:focus { border-color: #ef4444; }
+        .center { text-align: center; }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.8rem;
+            margin-top: 5px;
+        }
+
+        th, td {
+            border: 1px solid #27272a;
+            padding: 5px;
+            text-align: left;
+        }
+
+        th { background: #09090b; color: #a1a1aa; font-size: 0.7rem; }
+        td input { border: none; background: transparent; padding: 0; }
+        
+        .check-td { text-align: center; }
+        .check-td input { width: auto; cursor: pointer; }
