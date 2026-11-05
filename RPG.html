@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ficha Minimalista - Ordem Paranormal</title>
+    <title>Ficha - Ordem Paranormal</title>
     <link rel="stylesheet" href="RPG.css">
+    <button onclick="window.location.href='pagina2.html';">
+  Ir para a outra página
+</button>
 </head>
 <body>
 
@@ -13,24 +16,99 @@
 
         <!-- Dados Básicos -->
         <div class="grid grid-2">
-            <div class="field"><label>AGENTE</label><input type="text" placeholder="Nome"></div>
-            <div class="field"><label>JOGADOR</label><input type="text" placeholder="Nome do Jogador"></div>
+            <div class="field">
+                <label>AGENTE</label>
+                <input type="text" placeholder="Nome do Agente">
+            </div>
+            <div class="field">
+                <label>JOGADOR</label>
+                <input type="text" placeholder="Nome do Jogador">
+            </div>
         </div>
 
-        <div class="grid grid-3" style="margin-top: 8px;">
-            <div class="field"><label>ORIGEM</label><input type="text"></div>
-            <div class="field"><label>CLASSE</label><input type="text"></div>
-            <div class="field"><label>NEX %</label><input type="text" class="center" placeholder="5%"></div>
+        <div class="grid grid-3">
+            <!-- Dropdown de Origem -->
+            <div class="field">
+                <label>ORIGEM</label>
+                <select name="origem">
+                    <option value="" disabled selected>Selecione...</option>
+                    <option value="academico">Acadêmico</option>
+                    <option value="agente_saude">Agente de Saúde</option>
+                    <option value="amnesico">Amnésico</option>
+                    <option value="artista">Artista</option>
+                    <option value="atleta">Atleta</option>
+                    <option value="chef">Chef</option>
+                    <option value="criminoso">Criminoso</option>
+                    <option value="cultista_arrependido">Cultista Arrependido</option>
+                    <option value="desgarrado">Desgarrado</option>
+                    <option value="enfermeiro">Enfermeiro</option>
+                    <option value="engenheiro">Engenheiro</option>
+                    <option value="executivo">Executivo</option>
+                    <option value="investigador">Investigador</option>
+                    <option value="lutador">Lutador</option>
+                    <option value="magnata">Magnata</option>
+                    <option value="mercenario">Mercenário</option>
+                    <option value="militar">Militar</option>
+                    <option value="operario">Operário</option>
+                    <option value="perito">Perito</option>
+                    <option value="policial">Policial</option>
+                    <option value="religioso">Religioso</option>
+                    <option value="servidor_publico">Servidor Público</option>
+                    <option value="teorico_conspiracao">Teórico da Conspiração</option>
+                    <option value="ti">T.I.</option>
+                    <option value="trabalhador_rural">Trabalhador Rural</option>
+                    <option value="vitima">Vítima</option>
+                </select>
+            </div>
+            
+            <!-- Dropdown de Classe -->
+            <div class="field">
+                <label>CLASSE</label>
+                <select name="classe">
+                    <option value="" disabled selected>Selecione...</option>
+                    <option value="combatente">Combatente</option>
+                    <option value="especialista">Especialista</option>
+                    <option value="ocultista">Ocultista</option>
+                </select>
+            </div>
+            
+            <!-- Dropdown de NEX % -->
+            <div class="field">
+                <label>NEX %</label>
+                <select name="nex" class="center">
+                    <option value="5" selected>5%</option>
+                    <option value="10">10%</option>
+                    <option value="15">15%</option>
+                    <option value="20">20%</option>
+                    <option value="25">25%</option>
+                    <option value="30">30%</option>
+                    <option value="35">35%</option>
+                    <option value="40">40%</option>
+                    <option value="45">45%</option>
+                    <option value="50">50%</option>
+                    <option value="55">55%</option>
+                    <option value="60">60%</option>
+                    <option value="65">65%</option>
+                    <option value="70">70%</option>
+                    <option value="75">75%</option>
+                    <option value="80">80%</option>
+                    <option value="85">85%</option>
+                    <option value="90">90%</option>
+                    <option value="95">95%</option>
+                    <option value="99">99%</option>
+                    <option value="100">100%</option>
+                </select>
+            </div>
         </div>
 
         <!-- Atributos -->
         <h2>Atributos</h2>
         <div class="grid grid-5">
-            <div class="field"><label class="center">AGI</label><input type="number" class="center" value="1"></div>
-            <div class="field"><label class="center">FOR</label><input type="number" class="center" value="1"></div>
-            <div class="field"><label class="center">INT</label><input type="number" class="center" value="1"></div>
-            <div class="field"><label class="center">PRE</label><input type="number" class="center" value="1"></div>
-            <div class="field"><label class="center">VIG</label><input type="number" class="center" value="1"></div>
+            <div class="field"><label class="center">AGI</label><input type="number" class="center" value="1" min="0" max="5"></div>
+            <div class="field"><label class="center">FOR</label><input type="number" class="center" value="1" min="0" max="5"></div>
+            <div class="field"><label class="center">INT</label><input type="number" class="center" value="1" min="0" max="5"></div>
+            <div class="field"><label class="center">PRE</label><input type="number" class="center" value="1" min="0" max="5"></div>
+            <div class="field"><label class="center">VIG</label><input type="number" class="center" value="1" min="0" max="5"></div>
         </div>
 
         <!-- Status do Agente -->
@@ -41,19 +119,35 @@
             <div class="field"><label>SAN (ATUAL / MÁX)</label><input type="text" class="center" placeholder="12 / 12"></div>
         </div>
 
-        <div class="grid grid-2" style="margin-top: 8px;">
-            <div class="field"><label>DEFESA</label><input type="text" class="center" placeholder="10"></div>
-            <div class="field"><label>DESLOCAMENTO</label><input type="text" class="center" placeholder="9m"></div>
+        <div class="grid grid-2">
+            <div class="field"><label>DEFESA</label><input type="number" class="center" placeholder="10"></div>
+            <div class="field">
+                <label>DESLOCAMENTO</label>
+                <select name="deslocamento" class="center">
+                    <option value="1.5">1,5m</option>
+                    <option value="3">3m</option>
+                    <option value="4.5">4,5m</option>
+                    <option value="6">6m</option>
+                    <option value="7.5">7,5m</option>
+                    <option value="9" selected>9m</option>
+                    <option value="10.5">10,5m</option>
+                    <option value="12">12m</option>
+                    <option value="13.5">13,5m</option>
+                    <option value="15">15m</option>
+                    <option value="16.5">16,5m</option>
+                    <option value="18">18m</option>
+                </select>
+            </div>
         </div>
 
-        <!-- Ataques Principal -->
+        <!-- Ataques -->
         <h2>Ataques</h2>
         <table>
             <thead>
                 <tr>
                     <th>ARMA / ATAQUE</th>
-                    <th style="width: 20%;">TESTE</th>
-                    <th style="width: 25%;">DANO / CRÍTICO</th>
+                    <th>TESTE</th>
+                    <th>DANO / CRÍTICO</th>
                 </tr>
             </thead>
             <tbody>
@@ -70,47 +164,50 @@
             </tbody>
         </table>
 
-        <!-- Perícias Principais -->
-        <h2>Perícias Principais</h2>
+        <!-- Perícias -->
+        <h2>Perícias</h2>
         <table>
-          <th>Perícia</th>
-                        <th style="width: 12%;">Atr</th>
-                        <th style="width: 15%;">Treino</th>
-                        <th style="width: 20%;">Outros</th>
-                        <th style="width: 20%;">Bônus</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>Acrobacia</td><td class="center">AGI</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
-                    <tr><td>Adestramento</td><td class="center">PRE</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
-                    <tr><td>Artes</td><td class="center">PRE</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
-                    <tr><td>Atletismo</td><td class="center">FOR</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
-                    <tr><td>Atualidades</td><td class="center">INT</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
-                    <tr><td>Ciências</td><td class="center">INT</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
-                    <tr><td>Crime</td><td class="center">AGI</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
-                    <tr><td>Diplomacia</td><td class="center">PRE</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
-                    <tr><td>Enganação</td><td class="center">PRE</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
-                    <tr><td>Fortitude</td><td class="center">VIG</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
-                    <tr><td>Furtividade</td><td class="center">AGI</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
-                    <tr><td>Iniciativa</td><td class="center">AGI</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
-                    <tr><td>Intimidação</td><td class="center">PRE</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
-                    <tr><td>Intuição</td><td class="center">PRE</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>                                                        
-                    <tr><td>Investigação</td><td class="center">INT</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
-                    <tr><td>Luta</td><td class="center">FOR</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
-                    <tr><td>Medicina</td><td class="center">INT</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
-                    <tr><td>Ocultismo</td><td class="center">INT</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
-                    <tr><td>Percepção</td><td class="center">PRE</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
-                    <tr><td>Pilotagem</td><td class="center">AGI</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
-                    <tr><td>Pontaria</td><td class="center">AGI</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
-                    <tr><td>Profissão</td><td class="center">INT</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
-                    <tr><td>Reflexos</td><td class="center">AGI</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
-                    <tr><td>Religião</td><td class="center">PRE</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
-                    <tr><td>Sobrevivência</td><td class="center">INT</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
-                    <tr><td>Tática</td><td class="center">INT</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
-                    <tr><td>Tecnologia</td><td class="center">INT</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
-                    <tr><td>Vontade</td><td class="center">PRE</td><td class="check-td"><input type="checkbox"></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+            <thead>
+                <tr>
+                    <th>Perícia</th>
+                    <th class="center">Atr</th>
+                    <th>Grau de Treino</th>
+                    <th class="center">Outros</th>
+                    <th class="center">Bônus Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Acrobacia</td><td class="center">AGI</td><td><select><option value="0">Destreinado (+0)</option><option value="5">Treinado (+5)</option><option value="10">Veterano (+10)</option><option value="15">Expert (+15)</option></select></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                <tr><td>Adestramento</td><td class="center">PRE</td><td><select><option value="0">Destreinado (+0)</option><option value="5">Treinado (+5)</option><option value="10">Veterano (+10)</option><option value="15">Expert (+15)</option></select></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                <tr><td>Artes</td><td class="center">PRE</td><td><select><option value="0">Destreinado (+0)</option><option value="5">Treinado (+5)</option><option value="10">Veterano (+10)</option><option value="15">Expert (+15)</option></select></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                <tr><td>Atletismo</td><td class="center">AGI</td><td><select><option value="0">Destreinado (+0)</option><option value="5">Treinado (+5)</option><option value="10">Veterano (+10)</option><option value="15">Expert (+15)</option></select></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                <tr><td>Atualidades</td><td class="center">INT</td><td><select><option value="0">Destreinado (+0)</option><option value="5">Treinado (+5)</option><option value="10">Veterano (+10)</option><option value="15">Expert (+15)</option></select></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                <tr><td>Ciências</td><td class="center">INT</td><td><select><option value="0">Destreinado (+0)</option><option value="5">Treinado (+5)</option><option value="10">Veterano (+10)</option><option value="15">Expert (+15)</option></select></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                <tr><td>Crime</td><td class="center">AGI</td><td><select><option value="0">Destreinado (+0)</option><option value="5">Treinado (+5)</option><option value="10">Veterano (+10)</option><option value="15">Expert (+15)</option></select></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                <tr><td>Diplomacia</td><td class="center">PRE</td><td><select><option value="0">Destreinado (+0)</option><option value="5">Treinado (+5)</option><option value="10">Veterano (+10)</option><option value="15">Expert (+15)</option></select></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                <tr><td>Enganação</td><td class="center">PRE</td><td><select><option value="0">Destreinado (+0)</option><option value="5">Treinado (+5)</option><option value="10">Veterano (+10)</option><option value="15">Expert (+15)</option></select></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                <tr><td>Fortitude</td><td class="center">VIG</td><td><select><option value="0">Destreinado (+0)</option><option value="5">Treinado (+5)</option><option value="10">Veterano (+10)</option><option value="15">Expert (+15)</option></select></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                <tr><td>Furtividade</td><td class="center">AGI</td><td><select><option value="0">Destreinado (+0)</option><option value="5">Treinado (+5)</option><option value="10">Veterano (+10)</option><option value="15">Expert (+15)</option></select></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                <tr><td>História</td><td class="center">INT</td><td><select><option value="0">Destreinado (+0)</option><option value="5">Treinado (+5)</option><option value="10">Veterano (+10)</option><option value="15">Expert (+15)</option></select></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                <tr><td>Intimidação</td><td class="center">PRE</td><td><select><option value="0">Destreinado (+0)</option><option value="5">Treinado (+5)</option><option value="10">Veterano (+10)</option><option value="15">Expert (+15)</option></select></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                <tr><td>Intuição</td><td class="center">PRE</td><td><select><option value="0">Destreinado (+0)</option><option value="5">Treinado (+5)</option><option value="10">Veterano (+10)</option><option value="15">Expert (+15)</option></select></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                <tr><td>Investigação</td><td class="center">INT</td><td><select><option value="0">Destreinado (+0)</option><option value="5">Treinado (+5)</option><option value="10">Veterano (+10)</option><option value="15">Expert (+15)</option></select></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                <tr><td>Luta</td><td class="center">FOR</td><td><select><option value="0">Destreinado (+0)</option><option value="5">Treinado (+5)</option><option value="10">Veterano (+10)</option><option value="15">Expert (+15)</option></select></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                <tr><td>Medicina</td><td class="center">INT</td><td><select><option value="0">Destreinado (+0)</option><option value="5">Treinado (+5)</option><option value="10">Veterano (+10)</option><option value="15">Expert (+15)</option></select></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                <tr><td>Ocultismo</td><td class="center">INT</td><td><select><option value="0">Destreinado (+0)</option><option value="5">Treinado (+5)</option><option value="10">Veterano (+10)</option><option value="15">Expert (+15)</option></select></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                <tr><td>Percepção</td><td class="center">PRE</td><td><select><option value="0">Destreinado (+0)</option><option value="5">Treinado (+5)</option><option value="10">Veterano (+10)</option><option value="15">Expert (+15)</option></select></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                <tr><td>Pilotagem</td><td class="center">AGI</td><td><select><option value="0">Destreinado (+0)</option><option value="5">Treinado (+5)</option><option value="10">Veterano (+10)</option><option value="15">Expert (+15)</option></select></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                <tr><td>Pontaria</td><td class="center">AGI</td><td><select><option value="0">Destreinado (+0)</option><option value="5">Treinado (+5)</option><option value="10">Veterano (+10)</option><option value="15">Expert (+15)</option></select></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                <tr><td>Profissão</td><td class="center">INT</td><td><select><option value="0">Destreinado (+0)</option><option value="5">Treinado (+5)</option><option value="10">Veterano (+10)</option><option value="15">Expert (+15)</option></select></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                <tr><td>Reflexos</td><td class="center">AGI</td><td><select><option value="0">Destreinado (+0)</option><option value="5">Treinado (+5)</option><option value="10">Veterano (+10)</option><option value="15">Expert (+15)</option></select></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                <tr><td>Religião</td><td class="center">INT</td><td><select><option value="0">Destreinado (+0)</option><option value="5">Treinado (+5)</option><option value="10">Veterano (+10)</option><option value="15">Expert (+15)</option></select></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                <tr><td>Sobrevivência</td><td class="center">INT</td><td><select><option value="0">Destreinado (+0)</option><option value="5">Treinado (+5)</option><option value="10">Veterano (+10)</option><option value="15">Expert (+15)</option></select></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                <tr><td>Tática</td><td class="center">INT</td><td><select><option value="0">Destreinado (+0)</option><option value="5">Treinado (+5)</option><option value="10">Veterano (+10)</option><option value="15">Expert (+15)</option></select></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                <tr><td>Tecnologia</td><td class="center">INT</td><td><select><option value="0">Destreinado (+0)</option><option value="5">Treinado (+5)</option><option value="10">Veterano (+10)</option><option value="15">Expert (+15)</option></select></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
+                <tr><td>Vontade</td><td class="center">PRE</td><td><select><option value="0">Destreinado (+0)</option><option value="5">Treinado (+5)</option><option value="10">Veterano (+10)</option><option value="15">Expert (+15)</option></select></td><td><input type="text" class="center"></td><td><input type="text" class="center" placeholder="+0"></td></tr>
             </tbody>
         </table>
     </div>
+
 </body>
 </html>

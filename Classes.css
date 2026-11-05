@@ -1,0 +1,173 @@
+/* Reset e Estilos de Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0b0c10;
+  color: #c5c6c7;
+  font-family: 'Segoe UI', Roboto, -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+  padding: 40px 20px;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+/* Títulos Principais das Classes */
+h1 {
+  color: #e63946;
+  font-size: 2.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  border-bottom: 3px solid #e63946;
+  text-shadow: 0 0 12px rgba(230, 57, 70, 0.3);
+}
+
+h1:first-of-type {
+  margin-top: 0;
+}
+
+/* Subtítulos de Secções (Habilidades, Trilhas, Características) */
+h2 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-top: 35px;
+  margin-bottom: 15px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #2a2d34;
+}
+
+/* Nomes das Trilhas */
+h3 {
+  color: #ff4d5d;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Parágrafos e Destaques */
+p {
+  margin-bottom: 16px;
+  color: #b0b8c4;
+  font-size: 1rem;
+}
+
+p strong {
+  color: #ffffff;
+}
+
+/* Listas de Habilidades e Trilhas */
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 25px;
+}
+
+ul li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 12px;
+  color: #c5c6c7;
+}
+
+ul li::before {
+  content: "■";
+  color: #e63946;
+  font-size: 0.75rem;
+  position: absolute;
+  left: 0;
+  top: 3px;
+}
+
+ul li strong {
+  color: #ffffff;
+}
+
+ul li em {
+  color: #8892b0;
+  font-style: italic;
+}
+
+/* Divisores entre Classes */
+hr {
+  border: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #e63946 0%, #2a2d34 60%, transparent 100%);
+  margin: 60px 0;
+}
+
+/* Tabelas de Progressão de NEX */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  margin-bottom: 35px;
+  background-color: #121318;
+  border: 1px solid #2a2d34;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+table th, 
+table td {
+  padding: 10px 14px;
+  text-align: left;
+  border-bottom: 1px solid #1f222e;
+}
+
+table th {
+  background-color: #1a1c24;
+  color: #e63946;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+table tr:nth-child(even) {
+  background-color: #161720;
+}
+
+table tr:hover {
+  background-color: #1f222e;
+}
+
+table td:first-child {
+  font-weight: 700;
+  color: #ffffff;
+  width: 90px;
+}
+
+/* Ajustes Responsivos para Telemóvel */
+@media (max-width: 600px) {
+  body {
+    padding: 20px 12px;
+  }
+
+  h1 {
+    font-size: 2.1rem;
+    letter-spacing: 1.5px;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  table th, 
+  table td {
+    padding: 8px 10px;
+    font-size: 0.85rem;
+  }
+}
