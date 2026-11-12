@@ -1,248 +1,222 @@
-/* ==========================================================================
-   1. VARIÁVEIS DE CORES E TEMA (ROOT)
-   ========================================================================== */
-:root {
-    /* Define a cor de fundo principal da página (quase preta) */
-    --bg-color: #121214;
-    
-    /* Define a cor de fundo do cartão/ficha principal */
-    --card-bg: #1e1e22;
-    
-    /* Cor das bordas das tabelas e campos */
-    --border-color: #323238;
-    
-    /* Cor padrão do texto (cinza bem claro para não cansar a vista) */
-    --text-color: #e1e1e6;
-    
-    /* Cor de destaque principal (roxo temático) */
-    --accent-color: #8257e5;
-    
-    /* Tom de roxo mais claro para quando o usuário interagir */
-    --accent-hover: #996dff;
-    
-    /* Cor de fundo para os campos de digitação (inputs e selects) */
-    --input-bg: #09090a;
-}
-
-/* ==========================================================================
-   2. RESET GLOBAL E CONFIGURAÇÕES BÁSICAS
-   ========================================================================== */
+/* Reset e Configurações Gerais */
 * {
-    /* Garante que o tamanho total do elemento inclua bordas e paddings (evita quebrar o layout) */
     box-sizing: border-box;
-    
-    /* Remove margens e espaçamentos padrão de todos os elementos HTML */
     margin: 0;
     padding: 0;
-    
-    /* Define a família de fontes padrão da aplicação */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    /* Aplica a cor de fundo definida na variável */
-    background-color: var(--bg-color);
-    
-    /* Aplica a cor do texto padrão */
-    color: var(--text-color);
-    
-    /* Cria um espaçamento interno nas bordas da tela */
-    padding: 20px;
-    
-    /* Centraliza a ficha no meio da tela */
-    display: flex;
-    justify-content: center;
+    background-color: #09090b;
+    color: #e4e4e7;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    padding: 24px 16px;
+    line-height: 1.4;
 }
 
-/* ==========================================================================
-   3. ESTRUTURA DO CONTAINER (FICHA)
-   ========================================================================== */
-.sheet {
-    /* Limita a largura máxima da ficha em telas grandes */
+/* Topo e Barra de Navegação (fora da .sheet) */
+body > h1 {
     max-width: 900px;
-    
-    /* Faz a ficha ocupar 100% da tela até atingir o limite max-width */
-    width: 100%;
-    
-    /* Cor de fundo do cartão */
-    background-color: var(--card-bg);
-    
-    /* Espaçamento interno entre o conteúdo e as bordas da ficha */
-    padding: 24px;
-    
-    /* Arredonda os cantos da ficha */
-    border-radius: 8px;
-    
-    /* Adiciona uma linha suave em volta da ficha */
-    border: 1px solid var(--border-color);
-    
-    /* Cria uma sombra projetada abaixo da ficha para dar efeito de elevação */
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    margin: 0 auto 10px auto;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #a1a1aa;
 }
 
-/* ==========================================================================
-   4. TÍTULOS (H1 e H2)
-   ========================================================================== */
-h1 {
-    /* Centraliza o texto do título principal */
-    text-align: center;
-    
-    /* Tamanho da fonte */
+body > div:first-of-type {
+    max-width: 900px;
+    margin: 0 auto 20px auto;
+}
+
+.navbar {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.nav-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #d4d4d8;
+    background-color: #18181b;
+    border: 1px solid #3f3f46;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    transition: all 0.2s ease;
+}
+
+.nav-btn:hover {
+    background-color: #7f1d1d;
+    border-color: #ef4444;
+    color: #ffffff;
+}
+
+.nav-btn.active {
+    background-color: #991b1b;
+    border-color: #dc2626;
+    color: #ffffff;
+    box-shadow: 0 0 12px rgba(220, 38, 38, 0.35);
+}
+
+/* Container Principal da Ficha */
+.sheet {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #141417;
+    border: 1px solid #27272a;
+    border-top: 4px solid #dc2626;
+    border-radius: 6px;
+    padding: 30px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.75);
+}
+
+.sheet h1 {
     font-size: 1.5rem;
-    
-    /* Espaçamento entre as letras para dar visual de título */
+    text-align: center;
     letter-spacing: 2px;
-    
-    /* Espaço abaixo do título */
-    margin-bottom: 20px;
-    
-    color: #fff;
-    
-    /* Cria uma linha roxa decorativa embaixo do título principal */
-    border-bottom: 2px solid var(--accent-color);
-    padding-bottom: 10px;
+    color: #ffffff;
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #27272a;
 }
 
 h2 {
-    font-size: 1.1rem;
-    
-    /* Espaçamento superior para afastar de seções anteriores */
-    margin-top: 24px;
-    
-    /* Espaçamento inferior para afastar do conteúdo */
-    margin-bottom: 12px;
-    
-    /* Deixa todo o texto em letras maiúsculas */
+    font-size: 1.05rem;
     text-transform: uppercase;
-    
-    letter-spacing: 1px;
-    color: var(--accent-color);
-    
-    /* Cria uma barrinha roxa vertical no lado esquerdo do título da seção */
-    border-left: 4px solid var(--accent-color);
-    padding-left: 8px;
+    letter-spacing: 1.5px;
+    color: #ef4444;
+    border-left: 3px solid #dc2626;
+    padding-left: 10px;
+    margin: 28px 0 14px 0;
 }
 
-/* ==========================================================================
-   5. SISTEMA DE GRIDS (ORGANIZAÇÃO DE COLUNAS)
-   ========================================================================== */
+/* Sistema de Grids */
 .grid {
-    /* Ativa o modo de layout Grid */
     display: grid;
-    
-    /* Define o espaço/distância entre os elementos do grid */
-    gap: 12px;
-    
-    margin-top: 12px;
+    gap: 14px;
+    margin-bottom: 16px;
 }
 
-/* Divide em 2 colunas de tamanhos iguais */
 .grid-2 { grid-template-columns: repeat(2, 1fr); }
-
-/* Divide em 3 colunas de tamanhos iguais */
 .grid-3 { grid-template-columns: repeat(3, 1fr); }
-
-/* Divide em 5 colunas de tamanhos iguais (usado nos Atributos) */
 .grid-5 { grid-template-columns: repeat(5, 1fr); }
 
-/* Responsividade: adapta o layout para telas pequenas (celulares) */
-@media (max-width: 600px) {
-    /* Em telas com menos de 600px, força todas as colunas a ficarem empilhadas (1 coluna) */
-    .grid-2, .grid-3, .grid-5 {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* ==========================================================================
-   6. CAMPOS DE FORMULÁRIO (INPUTS, SELECTS E LABELS)
-   ========================================================================== */
+/* Campos e Inputs */
 .field {
-    /* Empilha o rótulo (label) em cima do campo (input) */
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 6px;
 }
 
 label {
-    /* Deixa o texto do rótulo menor */
     font-size: 0.75rem;
-    font-weight: bold;
-    color: #a8a8b3;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    color: #a1a1aa;
     text-transform: uppercase;
 }
 
-/* Aplica estilo para todos os campos de texto, números e seletores */
-input[type="text"],
-input[type="number"],
-select {
+input, select {
     width: 100%;
-    
-    /* Altura interna do campo (espaço para digitação) */
-    padding: 8px 12px;
-    
-    background-color: var(--input-bg);
-    border: 1px solid var(--border-color);
+    background-color: #1c1c21;
+    border: 1px solid #3f3f46;
     border-radius: 4px;
-    color: #fff;
-    font-size: 0.9rem;
-    
-    /* Remove a borda azul/padrão que o navegador coloca ao clicar no campo */
+    color: #f4f4f5;
+    padding: 9px 10px;
+    font-size: 0.92rem;
+    font-family: inherit;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input::placeholder {
+    color: #52525b;
+}
+
+input:focus, select:focus {
     outline: none;
-    
-    /* Transição suave quando o campo muda de estado (foco) */
-    transition: border-color 0.2s;
+    border-color: #dc2626;
+    box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.2);
 }
 
-/* Estado de FOCO: Quando o usuário clica para digitar no campo */
-input[type="text"]:focus,
-input[type="number"]:focus,
-select:focus {
-    /* Altera a cor da borda para roxo indicando que está selecionado */
-    border-color: var(--accent-color);
+/* Destaque numérico para Atributos */
+.grid-5 input[type="number"] {
+    font-size: 1.35rem;
+    font-weight: 700;
+    padding: 12px 6px;
 }
 
-/* Classe utilitária para centralizar texto */
 .center {
     text-align: center;
 }
 
-/* ==========================================================================
-   7. ESTILIZAÇÃO DE TABELAS (PERÍCIAS E ATAQUES)
-   ========================================================================== */
+/* Tabelas (Ataques e Perícias) */
 table {
     width: 100%;
-    
-    /* Gruda as bordas das células da tabela (remove o espaço em branco entre elas) */
     border-collapse: collapse;
-    
-    margin-top: 8px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
 }
 
-th, td {
-    /* Espaçamento interno das células */
-    padding: 8px;
-    
-    /* Bordas ao redor de cada célula */
-    border: 1px solid var(--border-color);
-    
-    text-align: left;
+thead {
+    background-color: #1f1f24;
 }
 
-/* Cabeçalho da tabela */
 th {
-    background-color: var(--input-bg);
+    text-align: left;
     font-size: 0.75rem;
-    color: #a8a8b3;
     text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #a1a1aa;
+    padding: 10px 8px;
+    border-bottom: 2px solid #dc2626;
 }
 
-/* Remove a borda e o fundo dos inputs/selects que ficam DENTRO das tabelas */
+th.center {
+    text-align: center;
+}
+
+td {
+    padding: 6px 8px;
+    border-bottom: 1px solid #27272a;
+    vertical-align: middle;
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.015);
+}
+
+tbody tr:hover {
+    background-color: rgba(220, 38, 38, 0.06);
+}
+
+/* Inputs compactos dentro das tabelas */
 td input, td select {
-    border: none;
-    background: transparent;
+    padding: 6px 8px;
+    font-size: 0.85rem;
+    background-color: #18181c;
 }
 
-/* Ao clicar para editar dentro de uma célula da tabela, adiciona um fundo escuro */
-td input:focus, td select:focus {
-    background-color: var(--input-bg);
+/* Responsividade para celulares */
+@media (max-width: 650px) {
+    .sheet {
+        padding: 18px 14px;
+    }
+
+    .grid-2, .grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-5 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
 }
